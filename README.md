@@ -1,3 +1,5 @@
 # knowledge-graph-linux-man-pages
 
 The aim of this project is to build a knowledge graph for linux commands using the description available in the man pages. It was created by finding the entities and relations present in the man pages. We couldn’t directly use the standard taggers and parsers as the format of man pages is not like normal plain English text. We studied the pages and created a few heuristics to identify the entities. ex. Text within italics/bold/hrefs(usually commands/ function descriptions), abbreviations, all caps, title case words, etc. Every entity is connected to command whose man page is containing it. We also learn the word embeddings using the man page description. We then connect the nodes that have a cosine similarity value greater than some threshold value. The knowledge graph thus created was studied and the findings were on community detection using clustering, similar commands belonged to the same group, identified important commands using degree centrality and closeness centrality measures.
+
+Slides: https://docs.google.com/presentation/d/1xJgIM_NmpAgv5wJa0uc3gLSIzEBfi0Nm17j5WxPonHc/edit?usp=sharing
